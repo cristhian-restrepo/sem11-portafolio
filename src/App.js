@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Resumen from './Resumen';
+import Habilidades from './Habilidades';
+import Proyectos from './Proyectos';
+import InformacionAdicional from './InformacionAdicional';
+import Contador from './Contador'; // Importamos el contador
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      {/* Encabezado */}
+      <header>
+        <h1>Mi Portafolio</h1>
       </header>
+
+      {/* Imagen Principal */}
+      <section id="imagen-principal">
+        <img src="empleado.png" alt="Imagen Principal" />
+      </section>
+
+      {/* Resumen */}
+      <Resumen />
+
+      {/* Habilidades */}
+      <Habilidades />
+
+      {/* Contador */}
+      <Contador /> {/* Agregamos el contador aquí */}
+
+      {/* Proyectos */}
+      <Proyectos />
+
+      {/* Información Adicional */}
+      <InformacionAdicional />
     </div>
   );
 }

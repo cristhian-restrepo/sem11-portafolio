@@ -1,38 +1,125 @@
-.App {
+:root {
+  --primary-color: #333;
+  --secondary-color: #f4f4f4;
+  --text-color: #333;
+  --background-light: #fff;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --highlight-color: #f0f0f0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--background-light);
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.habilidades-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.habilidades-duras, .habilidades-blandas {
+  width: 45%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.proyectos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.proyecto {
+  width: 45%;
+  background-color: var(--highlight-color);
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--box-shadow-color);
+}
+
+#imagen-principal {
+  text-align: center; 
+  padding: 20px 0; 
+}
+
+#imagen-principal img {
+  max-width: 10%; 
+  height: auto; 
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  
+  padding: 10px;
+  position: relative;
+}
+
+footer h2 {
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer ol {
+  text-align: center; 
+  list-style-position: inside; 
+  padding-left: 0;
+}
+
+#informacion-adicional {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .habilidades-container, .proyectos-container {
+      flex-direction: column; 
+      align-items: center; 
+      padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .habilidades-duras, .habilidades-blandas, .proyecto {
+      width: 100%; 
+      margin: 0; 
+      padding: 10px; 
+      box-sizing: border-box; 
+  }
+
+  .proyectos-container {
+      padding: 0; 
+  }
+
+  section {
+      margin: 10px; 
+      padding: 0; 
+  }
+
+  footer {
+      padding: 15px; 
   }
 }
